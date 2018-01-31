@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Convertor-1.0</string>
+    <string name="select_F2C">Fahrenheit to Celsius</string>
+    <string name="select_C2F">Celsius to Fahrenheit</string>
+    <string name="textview_Top">Conversion Select</string>
+    <string name="Compute_button">Convert</string>
+    <string name="Result_TV">Result</string>
+    <string name="Result_hint">Input your number here</string>
+    <string name="terminal_out">history_log-></string>
+</resources>
