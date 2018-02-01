@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Assignment2Notepad</string>
+    <string name="file_name">Product.json</string>
+    <string name="encoding">UTF-8</string>
+    <string name="no_file">No Notes File Present - No save time stamp - will appear once use the app for the first time</string>
+    <string name="saved">Pad saved, time updated</string>
+    <string name="Update">Last Update: Will be displayed here after first save!</string>
+    <string name="notePadHint">This is the Note pad, click to start making notes!</string>
+</resources>
