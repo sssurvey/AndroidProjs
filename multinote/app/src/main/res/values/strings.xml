@@ -2,8 +2,14 @@
     <string name="app_name">Multi note</string>
     <string name="menu_about">menu_about</string>
     <string name="menu_create">menu_create</string>
-    <string name="about_activity">Multi-Note Ver 1.0 \n - \n Courtesy of Haomin Shi \n - \n App name originated from MULTI PASS \n - \n Courtesy of Leeloo Dallas Multi-Pass</string>
+    <string name="about_activity">Multi-Note Ver 1.0 \n - \n Courtesy of Haomin Shi \n - \n App name originated from MULTI PASS \n - \n Courtesy of Leeloo Dallas Multi-Pass \n - \n Copyright © 2018</string>
     <string name="menu_save">menu_save</string>
     <string name="note_content_hint">You can input your note here: press back to discard, press save button to save.</string>
     <string name="note_title_hint">Untitled</string>
+    <string name="dialog_title">Warning</string>
+    <string name="dialog_question">Choose option</string>
+    <string name="dialog_save_option">Save</string>
+    <string name="dialog_discard_option">Discard</string>
+    <string name="toast_no_title_msg">Please enter a title</string>
+
 </resources>
