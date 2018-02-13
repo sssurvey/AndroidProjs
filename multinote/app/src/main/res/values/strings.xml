@@ -3,5 +3,7 @@
     <string name="menu_about">menu_about</string>
     <string name="menu_create">menu_create</string>
     <string name="about_activity">Multi-Note Ver 1.0 \n - \n Courtesy of Haomin Shi \n - \n App name originated from MULTI PASS \n - \n Courtesy of Leeloo Dallas Multi-Pass</string>
-
+    <string name="menu_save">menu_save</string>
+    <string name="note_content_hint">You can input your note here: press back to discard, press save button to save.</string>
+    <string name="note_title_hint">Untitled</string>
 </resources>
