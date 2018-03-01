@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Stock Watch</string>
+    <string name="stock_code">SAMP</string>
+    <string name="stock_desc">Sample Inc.</string>
+    <string name="stock_price">999.99</string>
+    <string name="stock_trend">UP 3.19 (3.14%)</string>
+    <string name="main_menu_add">Add</string>
+    <string name="main_menu_about">About</string>
+    <string name="about_text">Stock Watch\n\n© 2018, Haomin Shi\n \nVersion 1.0</string>
+    <string name="pre_easter_egg_text">___</string>
+    <string name="after_easter_egg_text">Hi!</string>
+</resources>
