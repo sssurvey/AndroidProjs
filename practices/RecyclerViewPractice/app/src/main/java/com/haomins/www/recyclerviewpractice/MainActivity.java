@@ -25,8 +25,6 @@ public class MainActivity extends AppCompatActivity {
 
 	}
 
-
-
 	public void addTop(View v) {
 		allPractice.add(0, new PracticeObj());
 		poa.notifyDataSetChanged();
