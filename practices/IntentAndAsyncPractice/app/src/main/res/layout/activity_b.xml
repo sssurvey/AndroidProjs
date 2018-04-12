@@ -4,45 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="81dp">
+    tools:context=".BActivity">
 
     <TextView
-        android:id="@+id/main_about"
+        android:id="@+id/textView_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="b did it" />
+        tools:text="fgsgs" />
 
-    <Button
-        android:id="@+id/doB_button"
+    <EditText
+        android:id="@+id/editText_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:onClick="doB"
-        android:text="GO"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_about" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_b" />
 
-    <TextView
-        android:id="@+id/main_async"
+    <Button
+        android:id="@+id/button_b"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:text="Async did it"
-        android:textSize="18sp"
+        android:onClick="goBack"
+        android:text="DONE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/doB_button" />
-
+        app:layout_constraintTop_toBottomOf="@+id/editText_b" />
 </android.support.constraint.ConstraintLayout>
