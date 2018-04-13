@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		tv_b = findViewById(R.id.main_about);
 		tv_Async = findViewById(R.id.main_async);
+
 	}
 
 
@@ -42,4 +43,15 @@ public class MainActivity extends AppCompatActivity {
 			tv_b.setText("request code wrong" + resultCode);
 		}
 	}
+
+
+	public void doAsync(View v){
+		tv_Async.setText("Doing");
+		long delay = 10;
+		new MyAsyncTask(this).execute(delay);
+
+
+
+	}
+
 }
