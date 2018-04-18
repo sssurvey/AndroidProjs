@@ -1,15 +1,19 @@
 package com.haomins.www.intentandasyncpractice;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
+
 public class MainActivity extends AppCompatActivity {
 
 	TextView tv_b;
 	TextView tv_Async;
+	private static String web_addr = "https://www.google.com";
 
 	String hello = "Hello from main!";
 	final static int REQUEST_CODE_B = 1;
@@ -52,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+	}
+
+	public void doWebIntend(View v){
+		String url = web_addr;
+		Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+		startActivity(i);
 	}
 
 }
