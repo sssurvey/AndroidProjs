@@ -8,6 +8,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 	ViewPager myViewPage;
 
 	List<Fragment> fragments;
+	ArrayList<NewsSource> newsSources = new ArrayList<>();
+	ArrayAdapter<NewsSource> newsSourceArrayAdapter;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,15 @@ public class MainActivity extends AppCompatActivity {
 					}
 			}
 		}
+	}
+
+	public void addSource(NewsSource newsSource){
+		newsSources.add(newsSource);
+		newsSourceArrayAdapter.notifyDataSetChanged();
+	}
+
+	public void clearSource(){
+		newsSources.clear();
 	}
 
 

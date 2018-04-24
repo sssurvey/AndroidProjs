@@ -85,17 +85,17 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         tools:text="Haomin Shi" />
 
-                    <ImageView
-                        android:id="@+id/frag_img"
+                    <ImageButton
+                        android:id="@+id/frag_imageB"
                         android:layout_width="0dp"
-                        android:layout_height="200"
+                        android:layout_height="200dp"
                         android:layout_marginEnd="8dp"
                         android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:scaleType="fitCenter"
+                        android:background="@android:color/white"
+                        android:scaleType="centerCrop"
                         android:src="@drawable/maxresdefault"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/frag_time" />
 
@@ -111,7 +111,7 @@
                         android:textSize="18sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/frag_img"
+                        app:layout_constraintTop_toBottomOf="@+id/frag_imageB"
                         tools:text="This is a really good movie, and i like it. This movie is good, but i havent watch it yet lalalalalala blalalala. This fox jump over lazy dog." />
 
                 </android.support.constraint.ConstraintLayout>

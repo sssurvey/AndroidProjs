@@ -3,16 +3,16 @@ package com.haomins.www.newsgateway;
 import java.io.Serializable;
 
 public class Article implements Serializable{
-	String title, author, description, source;
+	String title, author, description, time;
 	String URL, URL_IMAGE;
 
 	int total, index;
 
-	public Article(String title, String author, String description, String source, String URL, String URL_IMAGE, int total, int index) {
+	public Article(String title, String author, String description, String time, String URL, String URL_IMAGE, int total, int index) {
 		this.title = title;
 		this.author = author;
 		this.description = description;
-		this.source = source;
+		this.time = time;
 		this.URL = URL;
 		this.URL_IMAGE = URL_IMAGE;
 		this.total = total;
@@ -31,8 +31,8 @@ public class Article implements Serializable{
 		return description;
 	}
 
-	public String getSource() {
-		return source;
+	public String getTime() {
+		return time;
 	}
 
 	public String getURL() {
