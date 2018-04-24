@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ArticleFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/cons_out"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/frag_page"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/black"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="1 of 10" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteY="3dp">
+
+            <LinearLayout
+                android:id="@+id/liner_scoll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <android.support.constraint.ConstraintLayout
+                    android:id="@+id/cons_in"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/frag_title"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:textColor="@android:color/black"
+                        android:textSize="30sp"
+                        android:textStyle="bold"
+                        android:typeface="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Ready player one is a lively and agreeable work of fanboy art" />
+
+                    <TextView
+                        android:id="@+id/frag_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:textColor="@android:color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frag_title"
+                        tools:text="Mar 29, 2018 16:53" />
+
+                    <TextView
+                        android:id="@+id/frag_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:textColor="@android:color/holo_red_light"
+                        app:layout_constraintBaseline_toBaselineOf="@+id/frag_time"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:text="Haomin Shi" />
+
+                    <ImageView
+                        android:id="@+id/frag_img"
+                        android:layout_width="0dp"
+                        android:layout_height="200"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/maxresdefault"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frag_time" />
+
+                    <TextView
+                        android:id="@+id/frag_content"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/abhaya_libre"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frag_img"
+                        tools:text="This is a really good movie, and i like it. This movie is good, but i havent watch it yet lalalalalala blalalala. This fox jump over lazy dog." />
+
+                </android.support.constraint.ConstraintLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
