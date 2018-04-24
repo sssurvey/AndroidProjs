@@ -11,7 +11,8 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cons_out"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
 
         <TextView
             android:id="@+id/frag_page"
@@ -30,7 +31,9 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:layout_editor_absoluteY="3dp">
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:id="@+id/liner_scoll"
@@ -81,8 +84,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="8dp"
                         android:textColor="@android:color/holo_red_light"
-                        app:layout_constraintBaseline_toBaselineOf="@+id/frag_time"
                         app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/frag_time"
                         tools:text="Haomin Shi" />
 
                     <ImageButton
@@ -97,7 +100,7 @@
                         android:src="@drawable/maxresdefault"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/frag_time" />
+                        app:layout_constraintTop_toBottomOf="@+id/frag_author" />
 
                     <TextView
                         android:id="@+id/frag_content"

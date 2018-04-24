@@ -55,7 +55,7 @@ public class NewsService extends Service {
 		return START_STICKY;
 	}
 
-	class ServiceReceiver extends BroadcastReceiver{
+	public class ServiceReceiver extends BroadcastReceiver{
 		@Override
 		public void onReceive(Context context, Intent intent) {
 			AsyncArticleLoader asyncArticleLoader = new AsyncArticleLoader(newsService);

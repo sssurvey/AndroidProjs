@@ -19,7 +19,12 @@ import java.net.URL;
 
 public class AsyncSourceLoader extends AsyncTask<String, Void, String>{
 	MainActivity ma;
-	String prefix_url = "https://newsapi.org/v2/sources?apiKey=d88450b8758543b8a69aeaa4a9cac373";
+	String prefix_url = "https://newsapi.org/v1/sources?language=en&country=us&category=";
+	String postfix_url = "&apiKey=d88450b8758543b8a69aeaa4a9cac373";
+
+
+
+
 
 	public AsyncSourceLoader(MainActivity ma){
 		this.ma = ma;
@@ -30,7 +35,7 @@ public class AsyncSourceLoader extends AsyncTask<String, Void, String>{
 		StringBuilder sb = new StringBuilder();
 		String category = params[0];
 		try {
-			URL url = new URL(prefix_url+category);
+			URL url = new URL(prefix_url+category+postfix_url);
 			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 			conn.setRequestMethod("GET");
 			InputStream is = conn.getInputStream();
@@ -47,6 +52,11 @@ public class AsyncSourceLoader extends AsyncTask<String, Void, String>{
 			e.printStackTrace();
 		}
 		return null;
+	}
+
+	@Override
+	protected void onPostExecute(String s) {
+		parseJson(s);
 	}
 
 	private void parseJson(String s) {
