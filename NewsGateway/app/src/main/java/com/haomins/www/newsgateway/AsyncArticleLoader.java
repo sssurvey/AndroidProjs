@@ -18,6 +18,9 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
+//https://newsapi.org/v2/sources?apiKey=d88450b8758543b8a69aeaa4a9cac373
+
+
 public class AsyncArticleLoader extends AsyncTask<String, Void, String> {
 
 	@Override
