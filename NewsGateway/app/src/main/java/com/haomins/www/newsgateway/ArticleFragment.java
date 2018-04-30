@@ -32,18 +32,20 @@ public class ArticleFragment extends Fragment implements Serializable {
 	public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View v = inflater.inflate(R.layout.fragment_article, container, false);
 		TextView titleTV, authorTV, timeTV, contentTV, indexTV;
+		//this are for the textviews that is present in the fragment
 		final ImageButton imageButton = v.findViewById(R.id.frag_imageB);
 		titleTV = v.findViewById(R.id.frag_title);
 		authorTV = v.findViewById(R.id.frag_author);
 		timeTV = v.findViewById(R.id.frag_time);
 		contentTV = v.findViewById(R.id.frag_content);
 		indexTV = v.findViewById(R.id.frag_page);
+		//above is to link everything that is in the fragment with the layout.xml for the frag
 
 		final Article article;
 		if (savedInstanceState == null) {
-			article = (Article) getArguments().getSerializable("article");
+			article = (Article) getArguments().getSerializable("article"); //this is if the article is empty, then it load the article from the Article
 		} else {
-			article = (Article) savedInstanceState.getSerializable("article");
+			article = (Article) savedInstanceState.getSerializable("article"); //if there is pre load data, do the same, but based on preload data
 		}
 
 		timeTV.setText(article.getTime().split("T")[0]);
@@ -96,7 +98,7 @@ public class ArticleFragment extends Fragment implements Serializable {
 	@Override
 	public void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
-		outState.putSerializable("article", getArguments().getSerializable("article"));
+		outState.putSerializable("article", getArguments().getSerializable("article")); //this is to save the article, so we can just reload it when rotating the screen
 	}
 }
 

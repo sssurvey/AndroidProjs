@@ -1,6 +1,7 @@
 package com.haomins.www.newsgateway;
 
 import android.os.AsyncTask;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -22,10 +23,6 @@ public class AsyncSourceLoader extends AsyncTask<String, Void, String>{
 	String prefix_url = "https://newsapi.org/v1/sources?language=en&country=us&category=";
 	String postfix_url = "&apiKey=d88450b8758543b8a69aeaa4a9cac373";
 
-
-
-
-
 	public AsyncSourceLoader(MainActivity ma){
 		this.ma = ma;
 	}
@@ -45,19 +42,23 @@ public class AsyncSourceLoader extends AsyncTask<String, Void, String>{
 			while ((line = reader.readLine()) != null) sb.append(line).append("\n");
 			return sb.toString();
 		} catch (MalformedURLException e) {
+			Toast.makeText(ma,"Malformed",Toast.LENGTH_LONG).show();
 			e.printStackTrace();
 		} catch (ProtocolException e) {
 			e.printStackTrace();
+			Toast.makeText(ma,"ProtocalE",Toast.LENGTH_LONG).show();
 		} catch (IOException e) {
 			e.printStackTrace();
+			Toast.makeText(ma,"IOE",Toast.LENGTH_LONG).show();
 		}
 		return null;
 	}
 
 	@Override
 	protected void onPostExecute(String s) {
-		parseJson(s);
-	}
+			parseJson(s);
+		}
+
 
 	private void parseJson(String s) {
 		try {
@@ -77,6 +78,14 @@ public class AsyncSourceLoader extends AsyncTask<String, Void, String>{
 			}
 		} catch (JSONException e) {
 			e.printStackTrace();
+			ma.clearSource();
+			Toast.makeText(ma,"IOE",Toast.LENGTH_LONG).show();
+			String id = "Connection issues";
+			String name = "Connection issues";
+			String url = "Connection issues";
+			String category = "Connection issues";
+			NewsSource newsSource = new NewsSource(id, name, url, category);
+			ma.addSource(newsSource);
 		}
 
 	}
