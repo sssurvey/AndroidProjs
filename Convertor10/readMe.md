@@ -1,7 +1,7 @@
 # Converter  <br /> V1.0
-######By Haomin Shi
-##Read me
-##### This app follows the "App Requirements" provide by the professor on BlackBoard. 
+###### By Haomin Shi
+## Read me
+##### This app follows the "App Requirements" provide by the professor on BlackBoard.
 1. The app allow the user to select either Fahrenheit to Celsius or Celsius to Farenheit converstions. And there is no other conversions allowed. By using the radio button, only one converstion is allowed.
 2. The Constraint Layout is implemented.
 3. In the doConverstion Function, two formulae provide by the professor for converstion is implemented.
@@ -20,7 +20,7 @@
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-##App UI preview
+## App UI preview
 ##### App Logo:
 <p align="center">
   <img src="forReadMe/logo1.png" width="100"/>
@@ -38,6 +38,5 @@
   <img src="forReadMe/Ls.png" width="550"/>
 </p>
 
-##End
-#####Assignment 1 for CS 442
-######Haomin Shi - A20314967
+## End
+##### Assignment 1 for CS 442
